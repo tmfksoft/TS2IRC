@@ -32,8 +32,8 @@ class irc {
 			echo "Connecting to {$config['irc_ip']}\n";
 			// Normal IRC Client.
 			$sock = fsockopen($config['irc_ip'], $config['irc_port'], $errno, $errstr, 30) or die("Error connecting to IRCD!");
-			fputs($sock,"NICK TeamSpeak\n");
-			fputs($sock,"USER TeamSpeak \"TS2IRC\" \"{$config['irc_ip']}\" :TeamSpeak (TS2IRC)\n");
+			fputs($sock,"NICK {$config['irc_name']}\n");
+			fputs($sock,"USER {$config['irc_name']} \"TS2IRC\" \"{$config['irc_ip']}\" :TeamSpeak (TS2IRC)\n");
 			echo "Sent IRC headers.\n";
 			return $sock;
 		}
