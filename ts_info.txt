@@ -1,0 +1,18 @@
+// To send TEXT to TS.
+
+login serveradmin Nqzg1fWd
+use 1
+clientupdate client_nickname=(IRC)\sFudgie
+
+// Global
+sendtextmessage targetmode=3 msg=Testing\s1\s2\s3!
+
+// Lobby
+sendtextmessage targetmode=2 target=1 msg=Testing\s1\s2\s3!
+
+// Bind to crucial events
+servernotifyregister event=channel id=1
+servernotifyregister event=textchannel id=1
+
+// Notifications
+notifytextmessage targetmode=2 msg=._. invokerid=14 invokername=Fudgie invokeruid=UwEW3Jocb2lHN+E3R8QdJ4twEt0=
